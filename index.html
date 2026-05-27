@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Two Black Cats — Morty &amp; Negrita. Un cuento cinematográfico sobre dos sombras Bombay que aprendieron a habitar la casa antes que nosotros."
+    />
+    <meta property="og:title" content="Two Black Cats — Morty &amp; Negrita" />
+    <meta
+      property="og:description"
+      content="Un cuento cinematográfico. Tres capítulos: una, la otra, las dos."
+    />
+    <title>Two Black Cats — Morty &amp; Negrita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+
+    <!-- ──────────────────  TOP NAV  ────────────────── -->
+    <header class="top">
+      <a
+        class="monogram"
+        href="#hero"
+        aria-label="Two Black Cats — volver al inicio"
+        data-hover
+      >
+        <b>M</b>
+        <span class="dot"></span>
+        <b>N</b>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <button
+          class="pill"
+          id="menu-open"
+          data-hover
+          aria-haspopup="dialog"
+          aria-controls="menu"
+        >
+          <span class="glyph"></span> Menu
+        </button>
+      </nav>
+    </header>
+
+    <!-- ──────────────────  MENU OVERLAY  ────────────────── -->
+    <aside
+      class="menu-overlay"
+      id="menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menú del sitio"
+    >
+      <div class="menu-overlay__hd">
+        <span>· El índice</span>
+        <button class="menu-overlay__close" id="menu-close" data-hover>
+          Cerrar
+        </button>
+      </div>
+
+      <nav class="menu-overlay__nav">
+        <a href="#hero" data-hover data-menu-link>
+          <span class="idx">00</span>
+          <span class="lbl roll"
+            ><span class="roll__a">Opening</span
+            ><span class="roll__b">la apertura</span></span
+          >
+          <span class="alt">before the light →</span>
+        </a>
+        <a href="#manifesto" data-hover data-menu-link>
+          <span class="idx">01</span>
+          <span class="lbl roll"
+            ><span class="roll__a">Manifesto</span
+            ><span class="roll__b">manifiesto</span></span
+          >
+          <span class="alt">a short reading →</span>
+        </a>
+        <a href="#ch-morty" data-hover data-menu-link>
+          <span class="idx">02</span>
+          <span class="lbl roll"
+            ><span class="roll__a">Morty</span
+            ><span class="roll__b">el silencio</span></span
+          >
+          <span class="alt">quiet diplomat →</span>
+        </a>
+        <a href="#ch-negrita" data-hover data-menu-link>
+          <span class="idx">03</span>
+          <span class="lbl roll"
+            ><span class="roll__a">Negrita</span
+            ><span class="roll__b">el ruido bueno</span></span
+          >
+          <span class="alt">velvet earthquake →</span>
+        </a>
+        <a href="#ch-together" data-hover data-menu-link>
+          <span class="idx">04</span>
+          <span class="lbl roll"
+            ><span class="roll__a">Together</span
+            ><span class="roll__b">la manada</span></span
+          >
+          <span class="alt">the two of them →</span>
+        </a>
+      </nav>
+
+      <div class="menu-overlay__ft">
+        <div>Málaga · 2018 — ∞</div>
+        <div class="ctr">
+          <a href="mailto:hello@twoblackcats.studio"
+            >hello@twoblackcats.studio</a
+          >
+        </div>
+        <div class="end">Filmed mostly at night</div>
+      </div>
+    </aside>
+
+    <!-- ──────────────────  HUD  ────────────────── -->
+    <div class="hud">
+      <div class="chapter" id="hud-chapter">
+        <span class="num">I</span>
+        <span class="label">Before the light</span>
+      </div>
+      <div class="progress" aria-hidden="true"><i id="hud-progress"></i></div>
+    </div>
+
+    <!-- ──────────────────  HERO  ────────────────── -->
+    <section
+      data-theme="dark"
+      data-chapter="I — Before the light"
+      class="hero"
+      id="hero"
+    >
+      <div class="hero__bg">
+        <img
+          src="src/images/negrita-eyes.jpg"
+          alt="Los ojos de Negrita — ámbar en la oscuridad"
+          fetchpriority="high"
+        />
+        <div class="pulse" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__overlay">
+        <div class="hero__pretitle r-fade">
+          <span class="dot"></span>
+          <span>A film in three breaths</span>
+          <span>·</span>
+          <span>2018 — ∞</span>
+        </div>
+
+        <div class="hero__line left">
+          <span class="h-grotesk r-mask"><span>THEY&nbsp;WERE</span></span>
+        </div>
+
+        <div class="hero__line center">
+          <span class="h-italic r-mask"><span>here&nbsp;before</span></span>
+        </div>
+
+        <div class="hero__line right">
+          <span class="h-grotesk r-mask"><span>the&nbsp;</span></span>
+          <span class="h-italic r-mask" style="--delay: 120ms"
+            ><span>light.</span></span
+          >
+        </div>
+
+        <div class="hero__bottom">
+          <div class="hero__annot r-fade">
+            <span class="annot"
+              ><span class="star">✻</span> Un cuento cinematográfico sobre
+              <em><i>Morty</i></em> &amp; <em><i>Negrita</i></em> — dos sombras
+              Bombay que aprendieron a habitar la casa antes que nosotros.</span
+            >
+          </div>
+          <div></div>
+          <a
+            class="hero__arrow r-fade"
+            style="--delay: 200ms"
+            href="#manifesto"
+            aria-label="Seguir leyendo"
+          >
+            <em>scroll</em>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              aria-hidden="true"
+            >
+              <path d="M12 4v16m0 0l-6-6m6 6l6-6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────  BLEED to light  ────────────────── -->
+    <div class="bleed"></div>
+
+    <!-- ──────────────────  MANIFESTO  ────────────────── -->
+    <section
+      data-theme="light"
+      data-chapter="II — A manifesto for two"
+      class="manifesto"
+      id="manifesto"
+    >
+      <div class="manifesto__label">
+        <div><span class="num">02</span> — Manifesto</div>
+        <div style="opacity: 0.5; margin-top: 4px">A short reading.</div>
+      </div>
+
+      <div>
+        <p class="manifesto__body r-fade">
+          Two Black Cats is not a brand. It is the daily record of
+          <em>Morty</em> and <em>Negrita</em>,
+          <span class="amber">dos Bombays</span> que viven a contraluz — ojos de
+          ámbar, pasos en el parqué, costumbre de mirar fijo cuando la noche se
+          vuelve interesante.
+        </p>
+
+        <h3 class="manifesto__quote r-mask" style="margin-top: 60px" data-hover>
+          <span data-split>"We don't own them — we share the floor."</span>
+        </h3>
+
+        <p
+          class="manifesto__body r-fade"
+          style="margin-top: 48px; --delay: 120ms"
+        >
+          Este sitio reúne fotos, notas y pequeños rituales. Tres capítulos:
+          <em>una</em>, <em>la otra</em>, <em>las dos</em>. Léelo con calma.
+          <span class="amber">La luz tarda en llegar.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ──────────────────  CHAPTER 01 — MORTY  ────────────────── -->
+    <div class="bleed reverse"></div>
+
+    <section
+      data-theme="dark"
+      data-chapter="01 — Morty"
+      class="chapter"
+      id="ch-morty"
+    >
+      <div class="chapter__head r-fade">
+        <div class="chapter__num">01<small>/03</small></div>
+        <div class="chapter__name r-mask">
+          <span class="roll auto-roll" data-hover
+            ><span class="roll__a">Morty</span
+            ><span class="roll__b">el silencio</span></span
+          >
+        </div>
+        <div class="chapter__meta">
+          <div><span class="k">Breed</span> Bombay</div>
+          <div>
+            <span class="k">Eyes</span> <span class="amber">Amber 14</span>
+          </div>
+          <div><span class="k">Temper</span> Quiet pyromancer</div>
+        </div>
+      </div>
+
+      <div class="morty">
+        <div class="morty__hero r-scale">
+          <img
+            src="src/design-images/morty-portrait.webp"
+            alt="Morty — retrato en penumbra"
+            loading="lazy"
+          />
+          <div class="caption">Plate 01 — Morty in lowlight</div>
+        </div>
+
+        <div class="morty__side">
+          <p class="morty__quote r-fade" data-hover data-split>
+            Morty entra a un cuarto y la temperatura baja
+            <span class="accent">dos grados</span>. He learned silence from the
+            marble floor and <em>patience</em> from the moon.
+          </p>
+
+          <dl class="morty__facts r-fade" style="--delay: 120ms">
+            <div>
+              <dt>Adopted</dt>
+              <dd>Spring, 2018</dd>
+            </div>
+            <div>
+              <dt>Hour</dt>
+              <dd>12:17</dd>
+            </div>
+            <div>
+              <dt>Weight</dt>
+              <dd>3.6&nbsp;kg of myth</dd>
+            </div>
+            <div>
+              <dt>Spell</dt>
+              <dd>Stares <em>through</em> walls</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────  CHAPTER 02 — NEGRITA  ────────────────── -->
+    <div class="bleed"></div>
+
+    <section
+      data-theme="light"
+      data-chapter="02 — Negrita"
+      class="chapter"
+      id="ch-negrita"
+    >
+      <div class="chapter__head r-fade">
+        <div class="chapter__num">02<small>/03</small></div>
+        <div class="chapter__name r-mask">
+          <span class="roll auto-roll dark" data-hover
+            ><span class="roll__a">Negrita</span
+            ><span class="roll__b">el ruido bueno</span></span
+          >
+        </div>
+        <div class="chapter__meta">
+          <div><span class="k">Breed</span> Bombay</div>
+          <div>
+            <span class="k">Eyes</span>
+            <span class="amber">Amber 17 — louder</span>
+          </div>
+          <div><span class="k">Temper</span> Velvet earthquake</div>
+        </div>
+      </div>
+
+      <div class="negrita">
+        <div class="negrita__side">
+          <p class="negrita__quote r-fade" data-hover data-split>
+            She is <em>the loud one</em>. Si Morty es el invierno, Negrita es el
+            verano que <em>se cuela por la ventana</em>
+            y rompe el florero a propósito.
+          </p>
+          <div
+            class="r-fade"
+            style="
+              --delay: 120ms;
+              font-family: var(--mono);
+              font-size: 11px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              opacity: 0.7;
+            "
+          >
+            <div>Field notes</div>
+            <ul
+              style="
+                padding: 14px 0 0 0;
+                list-style: none;
+                line-height: 2.1;
+                font-family: var(--sans);
+                font-size: 15px;
+                letter-spacing: 0;
+                text-transform: none;
+                opacity: 0.85;
+              "
+            >
+              <li>— Habla. Mucho. En tres idiomas.</li>
+              <li>— Roba calcetines como ofrendas.</li>
+              <li>— Duerme con la lengua afuera.</li>
+              <li>— Reconoce su nombre, lo niega siempre.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="negrita__stack r-fade">
+          <div class="negrita__slot">
+            <img
+              src="src/design-images/negrita-1.webp"
+              alt="Negrita — primer plano"
+              loading="lazy"
+            />
+          </div>
+          <div class="negrita__slot">
+            <img
+              src="src/design-images/negrita-2.webp"
+              alt="Negrita — detalle"
+              loading="lazy"
+            />
+          </div>
+          <div class="negrita__slot">
+            <img
+              src="src/design-images/negrita-3.webp"
+              alt="Negrita — en movimiento"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────  CHAPTER 03 — TOGETHER  ────────────────── -->
+    <section
+      data-theme="dark"
+      data-chapter="03 — The two of them"
+      class="together"
+      id="ch-together"
+    >
+      <div class="together__intro">
+        <div class="number r-fade">03 / 03 — the two of them</div>
+        <h2 class="r-mask">
+          <span>Morty <span class="amp">&amp;</span> Negrita</span>
+        </h2>
+        <p
+          class="together__caption r-fade"
+          style="--delay: 240ms; margin-top: clamp(30px, 4vw, 60px)"
+          data-hover
+          data-split
+        >
+          A veces son una sola sombra con cuatro orejas.
+          <em>Sometimes they are weather.</em>
+          Always, they were here first.
+        </p>
+      </div>
+
+      <div class="together__stack">
+        <!-- Layer 1 — hero -->
+        <div class="together__layer together__layer--hero">
+          <img
+            src="src/uploads/20190828_152945.jpg"
+            alt="Morty y Negrita — agosto 2019"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Layer 2 -->
+        <div class="together__layer">
+          <img
+            src="src/uploads/20181119_143440.jpg"
+            alt="Morty y Negrita — noviembre 2018"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Layer 3 -->
+        <div class="together__layer">
+          <img
+            src="src/images/cat-couch.jpg"
+            alt="Los dos en el sofá"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Video reservado para cuando haya uno de las gatas:
+    <div class="together__layer">
+      <video autoplay muted loop playsinline
+             aria-label="Morty y Negrita — vídeo">
+        <source src="src/uploads/20260518-0719-36.5326217.mp4" type="video/mp4">
+      </video>
+    </div>
+    -->
+      </div>
+    </section>
+
+    <!-- ──────────────────  OUTRO  ────────────────── -->
+    <section data-theme="light" class="outro">
+      <div class="outro__lead">
+        <div>
+          <div class="label">✻ Coda</div>
+          <p class="r-fade">
+            A short film, an archive, a love letter. Updated
+            <em>when they let us</em>.
+          </p>
+        </div>
+        <div>
+          <div class="label">✻ Get in touch</div>
+          <p class="r-fade" style="--delay: 120ms">
+            Para colaborar, mandar atún o solo decir <em>hola</em>:
+            <a
+              href="mailto:hello@twoblackcats.studio"
+              style="
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 4px;
+              "
+              >hello@twoblackcats.studio</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Morty</span>
+          <span class="dot"></span>
+          <span class="grotesk">Negrita</span>
+          <span class="dot"></span>
+          <span>Bombay</span>
+          <span class="dot"></span>
+          <span class="grotesk">Shadow</span>
+          <span class="dot"></span>
+          <span>Ámbar</span>
+          <span class="dot"></span>
+          <span class="grotesk">Glint</span>
+          <span class="dot"></span>
+          <!-- repeat for seamless loop -->
+          <span>Morty</span>
+          <span class="dot"></span>
+          <span class="grotesk">Negrita</span>
+          <span class="dot"></span>
+          <span>Bombay</span>
+          <span class="dot"></span>
+          <span class="grotesk">Shadow</span>
+          <span class="dot"></span>
+          <span>Ámbar</span>
+          <span class="dot"></span>
+          <span class="grotesk">Glint</span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <div class="foot">
+        <div>© 2024 — ∞ &nbsp;Two Black Cats</div>
+        <div class="credit">Filmed at home, mostly at night.</div>
+        <div class="copy"><a href="#hero">Back to top ↑</a></div>
+      </div>
+    </section>
+
+    <script src="src/main.js" defer></script>
+  </body>
+</html>
