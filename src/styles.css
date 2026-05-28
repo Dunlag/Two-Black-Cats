@@ -905,5 +905,6 @@ section[data-theme="light"] [data-split]:hover .word { color: var(--amber-soft);
   .morty__facts { grid-template-columns: 1fr; }
   .top { padding: 16px 20px; }
   .hud { padding: 12px 20px; font-size: 9px; }
+  .outro__lead { grid-template-columns: 1fr; gap: 40px; }
   .hud .progress { width: 100px; }
 }
